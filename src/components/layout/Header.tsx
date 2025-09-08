@@ -42,9 +42,9 @@ const Header = () => {
       <div className="container-vimer">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
+          <Link to="/" className="flex items-center space-x-2 hover:opacity-90 transition-opacity">
             <img 
-              src="/lovable-uploads/889e56a1-ac2d-4391-8015-b8e43a7b7b30.png" 
+              src="/lovable-uploads/f6c9363b-5d5d-4564-989a-4d4be4e5326a.png" 
               alt="Vimer - Metais Sanitários" 
               className="h-8 w-auto"
             />
