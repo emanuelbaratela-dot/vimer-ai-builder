@@ -50,8 +50,8 @@ const Header = () => {
             />
           </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-8">
+          {/* Desktop Navigation - Centered */}
+          <nav className="hidden lg:flex items-center justify-center flex-1">
             <NavigationMenu>
               <NavigationMenuList>
                 {navigation.map((item) => (
@@ -96,18 +96,8 @@ const Header = () => {
             </NavigationMenu>
           </nav>
 
-          {/* Desktop Actions */}
-          <div className="hidden lg:flex items-center space-x-4">
-            <div className="relative">
-              <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
-              <Input
-                type="search"
-                placeholder="Buscar produtos..."
-                className="pl-10 w-64"
-              />
-            </div>
-            <Button variant="cta">Seja Revendedor</Button>
-          </div>
+          {/* Spacer for layout balance */}
+          <div className="hidden lg:block w-[140px]"></div>
 
           {/* Mobile Menu Button */}
           <button
@@ -127,16 +117,6 @@ const Header = () => {
       {mobileMenuOpen && (
         <div className="lg:hidden animate-slide-in">
           <div className="container-vimer py-4 space-y-4">
-            {/* Mobile Search */}
-            <div className="relative">
-              <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
-              <Input
-                type="search"
-                placeholder="Buscar produtos..."
-                className="pl-10 w-full"
-              />
-            </div>
-
             {/* Mobile Navigation */}
             <nav className="space-y-2">
               {navigation.map((item) => (
@@ -151,11 +131,6 @@ const Header = () => {
                 </div>
               ))}
             </nav>
-
-            {/* Mobile CTA */}
-            <Button variant="cta" className="w-full">
-              Seja Revendedor
-            </Button>
           </div>
         </div>
       )}
