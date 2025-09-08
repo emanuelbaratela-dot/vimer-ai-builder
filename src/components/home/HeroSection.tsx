@@ -13,7 +13,7 @@ const HeroSection = () => {
         }} />
       </div>
 
-      <div className="container-vimer relative z-10">
+      <div className="container relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
           <div className="animate-fade-in">
