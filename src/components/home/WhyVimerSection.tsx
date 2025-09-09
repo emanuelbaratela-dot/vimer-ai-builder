@@ -18,19 +18,9 @@ const WhyVimerSection = () => {
       icon: "💬",
     },
     {
-      title: "Frete grátis*",
-      description: "Em compras acima de R$ 299,00",
-      icon: "📦",
-    },
-    {
       title: "Testes hidrostáticos",
       description: "Todos os produtos testados e aprovados",
       icon: "✅",
-    },
-    {
-      title: "Qualidade certificada",
-      description: "Materiais de alta durabilidade e resistência",
-      icon: "🏆",
     },
   ];
 
@@ -46,7 +36,7 @@ const WhyVimerSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
           {benefits.map((benefit, index) => (
             <div
               key={benefit.title}
@@ -67,16 +57,6 @@ const WhyVimerSection = () => {
               </div>
             </div>
           ))}
-        </div>
-
-        <div className="mt-12 text-center">
-          <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-6 py-3 rounded-full">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
-            </span>
-            <span className="font-medium">Compromisso com a qualidade desde 2015</span>
-          </div>
         </div>
       </div>
     </section>

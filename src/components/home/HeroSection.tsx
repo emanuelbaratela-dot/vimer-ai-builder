@@ -76,13 +76,6 @@ const HeroSection = () => {
                 Conheça nossa linha
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
               </Button>
-              <Button 
-                variant="outline" 
-                size="lg"
-                onClick={() => window.open('https://vimertech.com.br/onde-comprar/', '_blank')}
-              >
-                Onde comprar
-              </Button>
             </div>
           </div>
 
