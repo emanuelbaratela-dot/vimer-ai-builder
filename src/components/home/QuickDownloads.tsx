@@ -1,40 +1,50 @@
-import { FileText, Download, BookOpen, FileCheck } from "lucide-react";
+import { FileText, Download, BookOpen, FileCheck, Archive } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const QuickDownloads = () => {
   const downloads = [
     {
       icon: FileText,
-      title: "Catálogo Geral",
+      title: "Catálogo",
       description: "Linha completa de produtos",
       size: "15 MB",
       format: "PDF",
+      url: "/downloads/catalogo-vimer-2024.pdf",
     },
     {
       icon: BookOpen,
-      title: "Manuais de Instalação",
+      title: "Manuais de instalação",
       description: "Guias passo a passo",
       size: "8 MB",
       format: "PDF",
+      url: "/downloads/manuais-instalacao.pdf",
     },
     {
       icon: FileCheck,
-      title: "Fichas Técnicas",
+      title: "Desenho técnico",
       description: "Especificações detalhadas",
       size: "12 MB",
-      format: "ZIP",
-    },
-    {
-      icon: FileText,
-      title: "Tabela de Preços",
-      description: "Valores atualizados",
-      size: "2 MB",
       format: "PDF",
+      url: "/downloads/desenho-tecnico.pdf",
     },
   ];
 
+  const handleDownload = (url: string, filename: string) => {
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = filename;
+    link.click();
+  };
+
+  const handleDownloadAll = () => {
+    const link = document.createElement('a');
+    link.href = '/downloads/vimer-arquivos.zip';
+    link.download = 'vimer-arquivos.zip';
+    link.click();
+  };
+
   return (
-    <section className="py-20 bg-gradient-subtle">
+    <section id="downloads" className="py-20 bg-gradient-subtle">
       <div className="container-vimer">
         {/* Section Header */}
         <div className="text-center mb-12">
@@ -45,7 +55,7 @@ const QuickDownloads = () => {
         </div>
 
         {/* Downloads Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
           {downloads.map((item, index) => (
             <div
               key={item.title}
@@ -68,7 +78,12 @@ const QuickDownloads = () => {
                 {item.description}
               </p>
 
-              <Button variant="outline" size="sm" className="w-full">
+              <Button 
+                variant="outline" 
+                size="sm" 
+                className="w-full"
+                onClick={() => handleDownload(item.url, item.title.toLowerCase().replace(/\s+/g, '-') + '.pdf')}
+              >
                 <Download className="h-4 w-4 mr-2" />
                 Baixar
               </Button>
@@ -76,10 +91,16 @@ const QuickDownloads = () => {
           ))}
         </div>
 
-        {/* View All */}
-        <div className="text-center mt-10">
-          <Button variant="default" size="lg">
-            Ver todos os downloads
+        {/* Download All Button */}
+        <div className="text-center">
+          <Button 
+            variant="default" 
+            size="lg"
+            onClick={handleDownloadAll}
+            className="group"
+          >
+            <Archive className="h-5 w-5 mr-2 transition-transform group-hover:scale-110" />
+            Baixar todos os arquivos
           </Button>
         </div>
       </div>

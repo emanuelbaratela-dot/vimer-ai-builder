@@ -6,11 +6,14 @@ import Collections from "@/components/home/Collections";
 import TargetAudience from "@/components/home/TargetAudience";
 import QuickDownloads from "@/components/home/QuickDownloads";
 import SupportSection from "@/components/home/SupportSection";
+import NewsletterSection from "@/components/home/NewsletterSection";
 
 const Index = () => {
   return (
     <div className="min-h-screen">
-      <HeroSection />
+      <div id="inicio">
+        <HeroSection />
+      </div>
       <WhyVimerSection />
       <TrustBadges />
       <FeaturedProducts />
@@ -18,6 +21,9 @@ const Index = () => {
       <TargetAudience />
       <QuickDownloads />
       <SupportSection />
+      <div id="suporte">
+        <NewsletterSection />
+      </div>
     </div>
   );
 };

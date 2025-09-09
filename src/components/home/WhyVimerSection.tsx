@@ -8,7 +8,7 @@ const WhyVimerSection = () => {
       icon: "🚚",
     },
     {
-      title: "Garantia 1 ano",
+      title: "Garantia 5 anos",
       description: "Proteção completa contra defeitos de fabricação",
       icon: "🛡️",
     },

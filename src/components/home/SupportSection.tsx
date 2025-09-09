@@ -1,17 +1,16 @@
 import { Shield, Wrench, MessageCircle, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
 
 const SupportSection = () => {
   return (
-    <section className="py-20">
+    <section id="assistencia" className="py-20">
       <div className="container-vimer">
         <div className="bg-gradient-primary rounded-3xl p-8 md:p-12 text-primary-foreground shadow-2xl">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Content */}
             <div>
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Suporte técnico e garantia de 1 ano
+                Assistência técnica e suporte
               </h2>
               <p className="text-primary-foreground/90 text-lg mb-8">
                 Conte com nossa equipe especializada para instalação, manutenção e acionamento de garantia. 
@@ -22,7 +21,7 @@ const SupportSection = () => {
               <div className="grid grid-cols-2 gap-4 mb-8">
                 <div className="flex items-center gap-3">
                   <Shield className="h-5 w-5 flex-shrink-0" />
-                  <span className="text-sm">Garantia total de 1 ano</span>
+                  <span className="text-sm">Garantia de 5 anos</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <Wrench className="h-5 w-5 flex-shrink-0" />
@@ -38,23 +37,15 @@ const SupportSection = () => {
                 </div>
               </div>
 
-              {/* CTAs */}
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link to="/suporte">
-                  <Button variant="secondary" size="lg">
-                    Acionar garantia
-                  </Button>
-                </Link>
-                <Link to="/suporte#faq">
-                  <Button 
-                    variant="outline" 
-                    size="lg"
-                    className="bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/20"
-                  >
-                    Central de ajuda
-                  </Button>
-                </Link>
-              </div>
+              {/* CTA */}
+              <Button 
+                variant="secondary" 
+                size="lg"
+                onClick={() => window.open('https://vimertech.com.br/suporte/', '_blank')}
+                className="min-h-[44px]"
+              >
+                Acessar suporte
+              </Button>
             </div>
 
             {/* Visual Element */}

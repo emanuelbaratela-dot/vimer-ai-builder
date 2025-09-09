@@ -14,8 +14,8 @@ const TrustBadges = () => {
     },
     {
       icon: Award,
-      title: "Garantia 1 ano",
-      description: "Cobertura total contra defeitos de fabricação",
+      title: "Garantia de 5 anos",
+      description: "Todos os produtos são testados",
     },
     {
       icon: Headphones,
