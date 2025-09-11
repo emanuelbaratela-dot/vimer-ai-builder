@@ -40,21 +40,17 @@ const WhyVimerSection = () => {
           {benefits.map((benefit, index) => (
             <div
               key={benefit.title}
-              className="bg-background rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 animate-fade-in"
+              className="bg-background rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 animate-fade-in flex flex-col items-center text-center"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="flex items-start gap-4">
-                <div className="text-3xl">{benefit.icon}</div>
-                <div className="flex-1">
-                  <h3 className="font-semibold text-lg mb-2 flex items-center gap-2">
-                    {benefit.title}
-                    <CheckCircle className="h-4 w-4 text-primary" />
-                  </h3>
-                  <p className="text-muted-foreground text-sm">
-                    {benefit.description}
-                  </p>
-                </div>
-              </div>
+              <div className="text-4xl mb-4">{benefit.icon}</div>
+              <h3 className="font-semibold text-lg mb-2 flex items-center gap-2">
+                {benefit.title}
+                <CheckCircle className="h-4 w-4 text-primary" />
+              </h3>
+              <p className="text-muted-foreground text-sm">
+                {benefit.description}
+              </p>
             </div>
           ))}
         </div>

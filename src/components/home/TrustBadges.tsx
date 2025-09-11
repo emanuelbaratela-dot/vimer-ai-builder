@@ -31,20 +31,16 @@ const TrustBadges = () => {
           {badges.map((badge, index) => (
             <div
               key={index}
-              className="flex items-start gap-4 p-6 bg-background rounded-xl shadow-sm hover:shadow-md transition-shadow animate-fade-in"
+              className="flex flex-col items-center text-center p-6 bg-background rounded-xl shadow-sm hover:shadow-md transition-shadow animate-fade-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="flex-shrink-0">
-                <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center">
-                  <badge.icon className="h-6 w-6 text-primary" />
-                </div>
+              <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
+                <badge.icon className="h-6 w-6 text-primary" />
               </div>
-              <div>
-                <h3 className="font-semibold mb-1">{badge.title}</h3>
-                <p className="text-sm text-muted-foreground">
-                  {badge.description}
-                </p>
-              </div>
+              <h3 className="font-semibold mb-2">{badge.title}</h3>
+              <p className="text-sm text-muted-foreground">
+                {badge.description}
+              </p>
             </div>
           ))}
         </div>
