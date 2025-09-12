@@ -49,7 +49,7 @@ const TargetAudience = () => {
           {audiences.map((audience, index) => (
             <div
               key={audience.title}
-              className="group relative bg-card rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 animate-fade-in border hover:border-primary/20"
+              className="group relative bg-card rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 animate-fade-in border hover:border-primary/20 flex flex-col items-center text-center"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {/* Icon */}

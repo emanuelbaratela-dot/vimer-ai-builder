@@ -59,22 +59,21 @@ const QuickDownloads = () => {
           {downloads.map((item, index) => (
             <div
               key={item.title}
-              className="bg-card rounded-xl p-6 shadow-sm hover:shadow-md transition-all animate-fade-in group"
+              className="bg-card rounded-xl p-6 shadow-sm hover:shadow-md transition-all animate-fade-in group flex flex-col items-center text-center"
               style={{ animationDelay: `${index * 0.05}s` }}
             >
-              <div className="flex items-center justify-between mb-4">
-                <div className="flex items-center gap-3">
-                  <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
-                    <item.icon className="h-5 w-5" />
-                  </div>
-                  <h3 className="font-semibold">{item.title}</h3>
-                </div>
-                <div className="flex items-center gap-1 text-xs text-muted-foreground">
-                  <span className="font-medium">{item.format}</span>
-                  <span>•</span>
-                  <span>{item.size}</span>
-                </div>
+              <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary group-hover:text-primary-foreground transition-colors mb-4">
+                <item.icon className="h-6 w-6" />
               </div>
+              
+              <h3 className="font-semibold mb-2">{item.title}</h3>
+              
+              <div className="flex items-center gap-1 text-xs text-muted-foreground mb-3">
+                <span className="font-medium">{item.format}</span>
+                <span>•</span>
+                <span>{item.size}</span>
+              </div>
+              
               <p className="text-sm text-muted-foreground mb-4">
                 {item.description}
               </p>
